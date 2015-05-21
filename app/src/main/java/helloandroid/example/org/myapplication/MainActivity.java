@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.EventListener;
+
 
 public class MainActivity extends Activity {
 
@@ -16,14 +18,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainactivity);
 
-        Button b = (Button) findViewById(R.id.my_button);
+        Button b = (Button)findViewById(R.id.button1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
-
+                //Intent intent = new Intent.
+                startActivity(new Intent(MainActivity.this,SecondActivity.class));
             }
         });
+
     }
 
     @Override
