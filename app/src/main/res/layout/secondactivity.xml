@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="This is the first flower"
+        android:text="You are gay."
         android:id="@+id/textView1"
         android:textStyle="bold"
         android:layout_marginTop="20dp"
@@ -31,7 +31,29 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:textAlignment="center"
-        android:text="Welcome the ultimate world of mystery. :prepare Com Android Support App compatV72211 Library UP-TO-DATE"
         android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:text="Below is what you entered" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/wifiStatus"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/BTStatus"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

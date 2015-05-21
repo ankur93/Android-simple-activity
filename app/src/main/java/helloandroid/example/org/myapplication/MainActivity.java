@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.EventListener;
 
@@ -19,11 +20,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.mainactivity);
 
         Button b = (Button)findViewById(R.id.button1);
+        final EditText et = (EditText)findViewById(R.id.textBox1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent.
-                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                intent.putExtra("textBox", et.getText().toString());
+
+                startActivity(intent);
             }
         });
 
