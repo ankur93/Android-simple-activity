@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         Toast.makeText(this,"Welcome Motherfucker",Toast.LENGTH_SHORT).show();
         Button b = (Button)findViewById(R.id.button1);
         final EditText et = (EditText)findViewById(R.id.textBox1);
+        et.setHint("Enter your name");
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
