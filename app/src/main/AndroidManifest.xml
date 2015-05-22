@@ -3,11 +3,12 @@
     package="helloandroid.example.org.myapplication" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_icon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Widget.AppCompat.ActionBar" >
 
         <activity
             android:name=".MainActivity"

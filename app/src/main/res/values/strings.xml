@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">MyApplication</string>
+    <string name="app_name">Ankur</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="hit">Hit me babe</string>
+    <string name="hit">Hit me Babe</string>
     <string name="execute">Execute me Now</string>
 
 </resources>

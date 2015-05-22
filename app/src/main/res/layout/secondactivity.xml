@@ -4,6 +4,8 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:layout_margin="@dimen/activity_horizontal_margin"
+    android:background="@mipmap/penguins"
+    android:id="@+id/layout"
     >
 
     <TextView
@@ -56,4 +58,40 @@
         android:text=""
         android:id="@+id/BTStatus"
         android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Text"
+            android:id="@+id/sendText" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google"
+            android:id="@+id/hitUrl"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Action"
+            android:id="@+id/button3"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+
+
+
+
 </LinearLayout>
