@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:id="@+id/scrollView"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent" android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -63,7 +70,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="30dp"
+        >
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -84,14 +93,10 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No Action"
-            android:id="@+id/button3"
+            android:text="Get Call"
+            android:id="@+id/getCall"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
-
-
-
-
-
 </LinearLayout>
+</ScrollView>

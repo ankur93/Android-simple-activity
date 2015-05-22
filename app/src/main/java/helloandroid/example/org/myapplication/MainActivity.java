@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);Log.d(ANKUR, "onCreate");
+        super.onCreate(savedInstanceState);/*Log.d(ANKUR, "Activity created or Device rotated");*/
         setContentView(R.layout.mainactivity);
 
         Toast.makeText(this,"Welcome Motherfucker",Toast.LENGTH_SHORT).show();
@@ -59,4 +59,34 @@ public class MainActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    /*@Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(ANKUR,"Pause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(ANKUR,"resume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(ANKUR,"restart");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(ANKUR,"stop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(ANKUR,"destroy");
+    }*/
 }
