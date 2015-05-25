@@ -27,6 +27,7 @@ public class SecondActivity extends Activity {
         View bg =findViewById(R.id.layout);
         bg.getBackground().setAlpha(120);
 
+        //enabling the left arrow icon at the action bar to go 1 activity back
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView tw = (TextView)findViewById(R.id.textView2);
@@ -36,8 +37,8 @@ public class SecondActivity extends Activity {
         TextView BT_text = (TextView)findViewById(R.id.BTStatus);
 
         ConnectivityManager conman = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
-        boolean wifi = conman.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
-        boolean bluetooth = conman.getNetworkInfo(ConnectivityManager.TYPE_BLUETOOTH).isConnectedOrConnecting();
+        boolean wifi = conman.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();//checks if wifi is connected
+        boolean bluetooth = conman.getNetworkInfo(ConnectivityManager.TYPE_BLUETOOTH).isConnectedOrConnecting();//checks if BT is connected
 
         if(wifi){
             wifi_text.setText("WIfi On");
@@ -56,6 +57,7 @@ public class SecondActivity extends Activity {
             }
         });
 
+        //send or share data across applications
         final Button sendMsg = (Button)findViewById(R.id.sendText);
         sendMsg.setOnClickListener(new View.OnClickListener() {
             @Override
