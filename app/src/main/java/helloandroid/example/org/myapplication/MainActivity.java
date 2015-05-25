@@ -1,8 +1,10 @@
 package helloandroid.example.org.myapplication;
 
 import android.app.Activity;
+import android.app.Notification;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -59,9 +61,20 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //to go back on click of the < icon on the action bar
-        if (id == R.id.action_settings) {
-            return true;
+        switch (id){
+            case R.id.action_settings:
+                return false;
+            case R.id.action_icon_share:
+                Intent msgInt = new Intent();
+                msgInt.setAction(Intent.ACTION_SEND);
+                msgInt.setType("text/plain");
+                msgInt.putExtra(Intent.EXTRA_TEXT, "Sharing Data through Action Bar. (Android Generated. Please ignore)");
+                startActivity(msgInt);
+                break;
+            case R.id.action_icon_fb:
+                Intent shareInt = new Intent(Intent.ACTION_VIEW, Uri.parse("https:facebook.com"));
+                startActivity(shareInt);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
