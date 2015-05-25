@@ -83,7 +83,7 @@ public class SecondActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        MenuItem menuItem = menu.add(R.string.action_settings);
         return super.onCreateOptionsMenu(menu);
     }
 
