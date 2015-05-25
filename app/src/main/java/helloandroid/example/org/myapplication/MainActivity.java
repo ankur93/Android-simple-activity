@@ -2,6 +2,7 @@ package helloandroid.example.org.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -20,11 +21,14 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);/*Log.d(ANKUR, "Activity created or Device rotated");*/
+        super.onCreate(savedInstanceState);Log.d(ANKUR, "Activity created or Device rotated");
         setContentView(R.layout.mainactivity);
 
+        //Activity Creation Toast Message
         Toast.makeText(this,"Welcome Motherfucker",Toast.LENGTH_SHORT).show();
         Button b = (Button)findViewById(R.id.button1);
+
+        //getting value entered in the text  box and passing it to second activity
         final EditText et = (EditText)findViewById(R.id.textBox1);
         et.setHint("Enter your name");
         b.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +41,7 @@ public class MainActivity extends Activity {
             }
         });
 
+        //setting transparency for the background image
         View bg = findViewById(R.id.layout);
         bg.getBackground().setAlpha(120);
     }
@@ -54,10 +59,22 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        //to go back on click of the < icon on the action bar
         if (id == R.id.action_settings) {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if(newConfig.orientation== Configuration.ORIENTATION_LANDSCAPE){
+            Toast.makeText(this,"Landscape", Toast.LENGTH_SHORT).show();
+        }
+        else if(newConfig.orientation==Configuration.ORIENTATION_PORTRAIT){
+            Toast.makeText(this,"Portrait",Toast.LENGTH_SHORT).show();
+        }
     }
 
     /*@Override
