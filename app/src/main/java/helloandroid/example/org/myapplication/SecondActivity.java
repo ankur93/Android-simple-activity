@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -84,6 +85,13 @@ public class SecondActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuItem menuItem = menu.add(R.string.action_settings);
+        menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Toast.makeText(SecondActivity.this,"Action bar icon clicked",Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
         return super.onCreateOptionsMenu(menu);
     }
 
