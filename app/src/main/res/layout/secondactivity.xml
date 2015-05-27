@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:layout_margin="@dimen/activity_horizontal_margin"
-    android:background="@mipmap/penguins"
+    android:background="@mipmap/activity1_bg"
     android:id="@+id/layout"
     >
 
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/ankur"
+        android:src="@mipmap/activity1_bg"
         android:contentDescription="Flower Image" />
 
     <TextView
@@ -93,8 +93,8 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Get Call"
-            android:id="@+id/getCall"
+            android:text="Third Activity"
+            android:id="@+id/thirdAct"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>

@@ -73,11 +73,11 @@ public class SecondActivity extends Activity {
             }
         });
 
-        Button getCall = (Button)findViewById(R.id.getCall);
-        getCall.setOnClickListener(new View.OnClickListener() {
+        Button thirdAct = (Button)findViewById(R.id.thirdAct);
+        thirdAct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SecondActivity.this,CallReceiver.class));
+                startActivity(new Intent(SecondActivity.this,ThirdActivity.class));
             }
         });
     }
